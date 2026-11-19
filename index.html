@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102d25">
+
+    <title>SENW FIVEPRAYER — Teman Ibadahmu</title>
+
+    <meta name="description" content="SENW FIVEPRAYER adalah teman untuk mencatat salat, belajar hadis, dan membangun kebiasaan ibadah.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">🌙</div>
+
+                <div>
+                    <h2>SENW FIVEPRAYER</h2>
+                    <p>Teman Ibadahmu</p>
+                </div>
+            </div>
+
+            <button class="profile-btn" id="profileBtn">
+                👤
+            </button>
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section class="page active" id="homePage">
+
+            <!-- GREETING -->
+            <section class="hero">
+                <div class="hero-text">
+                    <span class="eyebrow">
+                        ASSALAMU'ALAIKUM 👋
+                    </span>
+
+                    <h1>Mulai hari dengan kebaikan.</h1>
+
+                    <p>
+                        Catat ibadahmu dan terus belajar
+                        menjadi pribadi yang lebih baik.
+                    </p>
+                </div>
+
+                <div class="hero-icon">🕌</div>
+            </section>
+
+
+            <!-- STREAK -->
+            <section class="streak-card">
+                <div class="streak-top">
+                    <div>
+                        <span>🔥 STREAK SALAT</span>
+                        <h2 id="streakCount">0 Hari</h2>
+                    </div>
+
+                    <div class="streak-icon">🏆</div>
+                </div>
+
+                <p>
+                    Terus bangun kebiasaan baikmu.
+                </p>
+            </section>
+
+
+            <!-- STATISTIK -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <span>🕌</span>
+                    <strong id="prayerCount">0/5</strong>
+                    <p>Salat Hari Ini</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>📖</span>
+                    <strong id="hadithCount">0</strong>
+                    <p>Hadis Dipelajari</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>🏅</span>
+                    <strong id="badgeCount">0</strong>
+                    <p>Badge</p>
+                </div>
+
+            </section>
+
+
+            <!-- CHECKLIST SALAT -->
+            <section class="section">
+
+                <div class="section-heading">
+                    <h2>🕌 Salat Hari Ini</h2>
+
+                    <span id="todayDate"></span>
+                </div>
+
+                <div class="prayer-list" id="prayerList">
+                    <!-- Diisi JavaScript -->
+                </div>
+
+            </section>
+
+
+            <!-- HADIS HARI INI -->
+            <section class="section">
+
+                <div class="section-heading">
+                    <h2>📖 Hadis Hari Ini</h2>
+                </div>
+
+                <div class="hadith-card" id="dailyHadith">
+                    <div class="hadith-icon">📚</div>
+
+                    <h3>Belajar Hadis</h3>
+
+                    <p>
+                        Pelajari hadis dan maknanya
+                        untuk menambah pengetahuan.
+                    </p>
+
+                    <button
+                        class="primary-btn"
+                        data-page="hadith"
+                    >
+                        Mulai Belajar
+                    </button>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- HALAMAN HADIS -->
+        <section class="page" id="hadithPage" hidden>
+
+            <div class="page-heading">
+                <span>📖</span>
+                <h2>Belajar Hadis</h2>
+
+                <p>
+                    Belajar sedikit demi sedikit setiap hari.
+                </p>
+            </div>
+
+            <div id="hadithList">
+                <!-- Daftar hadis dibuat JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- HALAMAN KALENDER -->
+        <section class="page" id="calendarPage" hidden>
+
+            <div class="page-heading">
+                <span>📅</span>
+                <h2>Kalender Ibadah</h2>
+
+                <p>
+                    Lihat riwayat salatmu.
+                </p>
+            </div>
+
+            <div class="calendar-card">
+
+                <div class="calendar-header">
+                    <button id="prevMonth">‹</button>
+
+                    <h3 id="calendarMonth"></h3>
+
+                    <button id="nextMonth">›</button>
+                </div>
+
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Kalender dibuat JavaScript -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HALAMAN BADGE -->
+        <section class="page" id="badgePage" hidden>
+
+            <div class="page-heading">
+                <span>🏆</span>
+                <h2>Pencapaian</h2>
+
+                <p>
+                    Setiap langkah baik punya arti.
+                </p>
+            </div>
+
+            <div id="badgeList">
+                <!-- Badge dibuat JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- HALAMAN JADWAL SALAT -->
+        <section class="page" id="schedulePage" hidden>
+
+            <div class="page-heading">
+                <span>⏰</span>
+                <h2>Jadwal Salat</h2>
+
+                <p>
+                    Atur jadwal waktu salat di daerahmu.
+                </p>
+            </div>
+
+            <div class="schedule-card">
+
+                <h3>Jadwal Salat Manual</h3>
+
+                <p>
+                    Masukkan waktu salat sesuai jadwal
+                    resmi daerahmu.
+                </p>
+
+                <div id="scheduleList">
+                    <!-- Form jadwal dibuat JavaScript -->
+                </div>
+
+                <button class="primary-btn" id="saveSchedule">
+                    Simpan Jadwal
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-logo">
+                🌙 SENW FIVEPRAYER
+            </div>
+
+            <p>
+                Belajar, berusaha, dan terus memperbaiki diri.
+            </p>
+
+            <div class="footer-bottom">
+                © 2026 SENW FIVEPRAYER
+            </div>
+          <a href="https://sociabuzz.com/kenzzie/tribe"
+            target="_blank">
+            donate di sini
+            </a>
+        </footer>
+
+    </main>
+
+
+    <!-- NAVIGASI -->
+    <nav class="bottom-nav">
+
+        <button class="nav-item active" data-page="home">
+            <span>🏠</span>
+            Beranda
+        </button>
+
+        <button class="nav-item" data-page="hadith">
+            <span>📖</span>
+            Hadis
+        </button>
+
+        <button class="nav-item" data-page="calendar">
+            <span>📅</span>
+            Kalender
+        </button>
+
+        <button class="nav-item" data-page="badge">
+            <span>🏆</span>
+            Badge
+        </button>
+
+        <button class="nav-item" data-page="schedule">
+            <span>⏰</span>
+            Jadwal
+        </button>
+
+    </nav>
+
+
+    <!-- NOTIFIKASI -->
+    <div class="toast" id="toast"></div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="main.js"></script>
+
+</body>
+</html>

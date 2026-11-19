@@ -1,0 +1,808 @@
+
+/* =====================================
+   SENW FIVEPRAYER
+   Modern Islamic Emerald Theme
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #f4f8f5;
+    --white: #ffffff;
+    --green: #087b55;
+    --green-dark: #064e3b;
+    --green-light: #e3f4eb;
+    --gold: #d6aa4b;
+    --text: #18352a;
+    --muted: #82948a;
+    --border: #e5eee8;
+    --shadow: 0 8px 25px rgba(14, 75, 51, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+/* APP */
+
+.app {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.brand-icon {
+    width: 43px;
+    height: 43px;
+    background: var(--green);
+    color: white;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    box-shadow: 0 5px 15px rgba(8, 123, 85, .2);
+}
+
+.brand h1 {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.brand p {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+.profile-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--green);
+    font-size: 19px;
+    box-shadow: var(--shadow);
+}
+
+/* PAGE */
+
+.page {
+    padding: 8px 20px 30px;
+    animation: pageIn .3s ease;
+}
+
+.page[hidden] {
+    display: none !important;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #087b55, #064e3b);
+    color: white;
+    border-radius: 25px;
+    padding: 25px 22px;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(6, 78, 59, .17);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    right: -70px;
+    top: -80px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    right: -30px;
+    bottom: -80px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 75%;
+}
+
+.eyebrow {
+    font-size: 10px;
+    color: #c8e8d7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #d1e9dc;
+}
+
+.hero-icon {
+    font-size: 55px;
+    position: relative;
+    z-index: 2;
+    opacity: .9;
+}
+
+/* STREAK */
+
+.streak-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 17px;
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.streak-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.streak-icon {
+    width: 46px;
+    height: 46px;
+    background: #fff4df;
+    color: #d69b28;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+}
+
+.streak-card h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.streak-card p {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.streak-number {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.streak-number small {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.stat-card {
+    background: var(--white);
+    border-radius: 17px;
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 21px;
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.stat-card span {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+/* SECTION */
+
+.section {
+    margin-top: 27px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.section-heading h3 {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.section-heading span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* PRAYER LIST */
+
+#prayerList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prayer-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: .2s;
+}
+
+.prayer-item.done {
+    background: #eff9f2;
+    border-color: #c9e8d5;
+}
+
+.prayer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prayer-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    background: var(--green-light);
+    font-size: 19px;
+}
+
+.prayer-info h4 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.prayer-info p {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.prayer-check {
+    width: 29px;
+    height: 29px;
+    border: 2px solid #cbd9d0;
+    border-radius: 10px;
+    background: white;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+}
+
+.prayer-item.done .prayer-check {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+/* HADITH */
+
+#dailyHadith {
+    background: linear-gradient(135deg, #fff9eb, #fffdf6);
+    border: 1px solid #f1e5c9;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#dailyHadith::before {
+    content: "❝";
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    font-size: 75px;
+    color: rgba(214, 170, 75, .15);
+}
+
+.hadith-arabic {
+    font-size: 21px;
+    line-height: 2;
+    text-align: right;
+    color: var(--green-dark);
+    margin-bottom: 13px;
+}
+
+.hadith-translation {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #53665b;
+}
+
+.hadith-source {
+    margin-top: 13px;
+    color: #b18a36;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* PAGE HEADING */
+
+.page-heading {
+    margin: 10px 0 20px;
+}
+
+.page-heading h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.page-heading p {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* HADITH LIST */
+
+#hadithList {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.hadith-item {
+    background: white;
+    padding: 19px;
+    border-radius: 19px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.hadith-item h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: var(--green);
+}
+
+.hadith-item .hadith-arabic {
+    font-size: 20px;
+}
+
+.hadith-item .hadith-translation {
+    font-size: 12px;
+}
+
+.hadith-item .hadith-source {
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+/* CALENDAR */
+
+.calendar-card {
+    background: white;
+    padding: 18px;
+    border-radius: 21px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+    font-size: 14px;
+}
+
+.calendar-header button {
+    width: 32px;
+    height: 32px;
+    background: var(--green-light);
+    color: var(--green);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+    text-align: center;
+}
+
+.calendar-day {
+    min-height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    font-size: 11px;
+    background: #f7faf8;
+    color: var(--text);
+}
+
+.calendar-day.today {
+    background: var(--green);
+    color: white;
+    font-weight: 800;
+}
+
+.calendar-day.completed {
+    background: #dff3e7;
+    color: var(--green);
+    font-weight: 800;
+}
+
+.calendar-day.empty {
+    background: transparent;
+}
+
+/* BADGES */
+
+#badgeList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.badge-card {
+    background: white;
+    padding: 20px 12px;
+    border-radius: 19px;
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.badge-card.locked {
+    opacity: .55;
+    filter: grayscale(1);
+}
+
+.badge-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 19px;
+    background: #fff5df;
+    display: grid;
+    place-items: center;
+    font-size: 29px;
+    margin: 0 auto 12px;
+}
+
+.badge-card h3 {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.badge-card p {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* SCHEDULE */
+
+.schedule-card {
+    background: white;
+    padding: 18px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+#scheduleList {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.schedule-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.schedule-row label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.schedule-row input {
+    width: 115px;
+    padding: 9px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #f8fbf9;
+    color: var(--green-dark);
+    font-family: inherit;
+}
+
+#saveSchedule {
+    width: 100%;
+    background: var(--green);
+    color: white;
+    padding: 13px;
+    border-radius: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: .2s;
+}
+
+#saveSchedule:active {
+    transform: scale(.98);
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 25px 20px 20px;
+    color: var(--muted);
+}
+
+.footer-logo {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.footer p {
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    margin-top: 13px;
+    font-size: 9px;
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    padding: 11px 5px calc(11px + env(safe-area-inset-bottom));
+    z-index: 100;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    color: #9aa9a0;
+    font-size: 9px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.nav-item::before {
+    font-size: 19px;
+}
+
+.nav-item[data-page="home"]::before {
+    content: "⌂";
+}
+
+.nav-item[data-page="hadith"]::before {
+    content: "📖";
+}
+
+.nav-item[data-page="calendar"]::before {
+    content: "▦";
+}
+
+.nav-item[data-page="badge"]::before {
+    content: "🏅";
+}
+
+.nav-item[data-page="schedule"]::before {
+    content: "🕒";
+}
+
+.nav-item.active {
+    color: var(--green);
+    font-weight: 800;
+}
+
+/* TOAST */
+
+.toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translate(-50%, 15px);
+    background: #173d2d;
+    color: white;
+    padding: 12px 19px;
+    border-radius: 13px;
+    font-size: 11px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 200;
+    width: max-content;
+    max-width: 85%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.empty-state span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 500px) {
+    .page {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .hero {
+        min-height: 190px;
+        padding: 30px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .brand h1 {
+        font-size: 15px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero-icon {
+        font-size: 43px;
+    }
+
+    .stats {
+        gap: 6px;
+    }
+
+    .stat-card {
+        padding: 13px 5px;
+    }
+
+    .nav-item {
+        font-size: 8px;
+    }
+}
