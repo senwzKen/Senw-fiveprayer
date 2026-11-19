@@ -1,4 +1,3 @@
-
 /* =====================================
    SENW FIVEPRAYER
    Main JavaScript
@@ -45,7 +44,13 @@ const hadiths = [
         arabic: "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ",
         translation: "Siapa yang tidak menyayangi, maka ia tidak akan disayangi.",
         source: "HR. Bukhari No. 6013 dan Muslim No. 2319"
-    }
+    },
+  {
+    title:  "Berpuasa",
+    arabic:  "الصِّيَامُ جُنَّةٌ",
+    translation:  "Puasa itu adalah perisai(pelindung dari dosa dan api neraka",
+    source:  "HR. Bukhari & Muslim"
+  }
 ];
 
 const badges = [
